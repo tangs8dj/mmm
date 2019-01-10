@@ -1,0 +1,19 @@
+/* 乐淘的主题颜色 */
+/* a的颜色 */
+/* 边框颜色 */
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+html {
+  font-size: 100px;
+}
+body {
+  font-size: 0.16rem;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #666;
+}
