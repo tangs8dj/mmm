@@ -23,47 +23,47 @@
         <nav id="nav">
             <div class="group">
                 <div class="btn-group">
-                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        京东 <span class="caret"></span>
+                    <a class="dropdown-toggle shop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="txtShop">京东</i> <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">京东</a></li>
+                    <ul class="dropdown-menu gsshop">
+                        <li><a href="#">京东<i class="fa fa-check-square-o"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">一号店</a></li>
+                        <!-- <li><a href="#">一号店<i class="fa"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">天猫超市</a></li>
+                        <li><a href="#">天猫超市<i class="fa"></i></a></li> -->
                     </ul>
                 </div>
                 <div class="btn-group">
-                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        华北 <span class="caret"></span>
+                    <a class="dropdown-toggle shoparea" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="txtArea">华北</i> <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"> 华北（北京、山西等） </a></li>
+                    <ul class="dropdown-menu gsshoparea">
+                        <li><a href="#"> 华北（北京、山西等） <i class="fa fa-check-square-o"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"> 华东（山东、浙江等） </a></li>
+                        <!-- <li><a href="#"> 华东（山东、浙江等） <i class="fa"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"> 华南（广东、广西等） </a></li>
+                        <li><a href="#"> 华南（广东、广西等） <i class="fa"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"> 华中（湖北、河南等） </a></li>
+                        <li><a href="#"> 华中（湖北、河南等） <i class="fa"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"> 西南（四川、云南等） </a></li>
+                        <li><a href="#"> 西南（四川、云南等） <i class="fa"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"> 东北（辽宁、吉林等） </a></li>
+                        <li><a href="#"> 东北（辽宁、吉林等） <i class="fa"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"> 西北（宁夏、新疆等） </a></li>
+                        <li><a href="#"> 西北（宁夏、新疆等） <i class="fa"></i></a></li> -->
                     </ul>
                 </div>
                 <div class="btn-group">
-                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        1元 <span class="caret"></span>
+                    <a class="dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="txtPrice">1元</i> <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">1元</a></li>
+                    <ul class="dropdown-menu gsprice">
+                        <li><a href="#">1元<i class="fa fa-check-square-o"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">5元</a></li>
+                        <li><a href="#">5元<i class="fa"></i></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">9.9元</a></li>
+                        <li><a href="#">9.9元<i class="fa"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -72,12 +72,75 @@
             </div>
         </nav>
         <div id="product">
-               
-
+            <ul class="section">
+                <li>
+                    <a href="#">
+                        <img src="http://img10.360buyimg.com/n7/jfs/t577/85/103283769/55548/3ecfcbf8/5461b6e1N70e46439.jpg"
+                            alt="">
+                        <p class="pro-title">廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+                        <p class="pro-price">
+                            <span>¥0.50</span>
+                            <button class="btn-add">去凑单</button>
+                        </p>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <img src="http://img10.360buyimg.com/n7/jfs/t577/85/103283769/55548/3ecfcbf8/5461b6e1N70e46439.jpg" alt="">
+                        <p class="pro-title">廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+                        <p class="pro-price">
+                            <span>¥0.50</span>
+                            <button class="btn-add">去凑单</button>
+                        </p>
+                    </a>
+                </li> -->
+            </ul>
         </div>
     </main>
     <footer id="footer"></footer>
+    <script id="tpl-gsshop" type="text/html">
+        {{each result value index}}
+        <li><a href="#" data-id='{{value.shopId}}'>{{value.shopName}}
+            {{if index == 0}}
+                <i class="fa fa-check-square-o"></i>
+            {{else}}
+                <i class="fa"></i>
+            {{/if}}
+        </a></li>
+        {{if result.length-1 != index }}
+            <li role="separator" class="divider"></li>
+        {{/if}}
+        {{/each}}
+    </script>
 
+    <script id="tpl-getgsshoparea" type="text/html">
+        {{each result value index}}
+            <li><a href="#" data-id='{{value.areaId}}'>{{value.areaName}}
+                {{if index == 0}}
+                    <i class="fa fa-check-square-o"></i>
+                {{else}}
+                    <i class="fa"></i>
+                {{/if}}
+            </a></li>
+            {{if result.length-1 != index }}
+                <li role="separator" class="divider"></li>
+            {{/if}}
+        {{/each}}   
+    </script>
+    <script id="tpl-section" type="text/html">
+        {{each result value index}}
+            <li>
+                <a href="#">
+                    <img src="{{value.productImg}}" alt="">
+                        <p class="pro-title">{{value.productName}}</p>
+                        <p class="pro-price">
+                            <span>{{value.productPrice}}</span>
+                            <button class="btn-add">去凑单</button>
+                    </p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
 
     <script src="lib/mui/js/mui.min.js"></script>
     <script src="lib/zepto/zepto.min.js"></script>

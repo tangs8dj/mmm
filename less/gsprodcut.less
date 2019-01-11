@@ -118,6 +118,10 @@ button {
           &:hover {
             text-decoration: none;
           }
+          i{
+            font-style: normal;
+            border-bottom: 0  !important;
+          }
           .caret {
             border-top: 8px dashed rgb(138, 138, 138);
             border-right: 8px solid transparent;
@@ -125,12 +129,22 @@ button {
           }
           .active {
             border-top: none;
-            border-bottom: 8px dashed rgb(65, 65, 65);
+            border-bottom: 8px dashed #ff4e49;
           }
+        }
+        .dropdown-backdrop {
+          top: .8rem;
         }
         .dropdown-menu {
           width: 100vw;
           top: 0.3rem;
+          li {
+            .fa {
+              float: right;
+              color: #ff4e49;
+              line-height: .2rem;
+            }
+          }
         }
         &.open .dropdown-toggle {
           -webkit-box-shadow: none;
@@ -156,7 +170,50 @@ button {
   }
 
   #product {
-      padding: .1rem;
+      padding:.05rem;
+      .section {
+        li {
+          padding: .05rem;
+          width: 50%;
+          float: left;
+          a {
+            display: block;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            img {
+              width: 80%;
+              height: 1.6rem;
+              margin: .1rem auto 0;
+
+            }
+            .pro-title {
+              color: #000;
+              font-size: .12rem;
+              margin: .1rem;
+              white-space:nowrap;
+              overflow: hidden;
+              
+            }
+            .pro-price {
+              span {
+                color: #ff4e49;
+                margin-left: .1rem;
+                font-size: .18rem;
+              }
+              .btn-add {
+                float: right;
+                padding:0 .05rem;
+                color: #fff;
+                margin-right: .05rem;
+                background-color: #ff4e49;
+                border-radius: .05rem;
+                border: none;
+              }
+            }
+          }
+        }
+      }
       
   }
 }

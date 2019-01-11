@@ -11,8 +11,8 @@
   -webkit-text-size-adjust: 100%;
 }
 html body {
-  font-size: .14rem;
-  font-family: '微软雅黑';
+  font-size: 0.14rem;
+  font-family: "微软雅黑";
   background-color: #f1f1f1;
 }
 a {
@@ -56,23 +56,26 @@ button {
   display: flex;
   background-color: #ff4e49;
   height: 0.45rem;
-  line-height: .45rem;
+  line-height: 0.45rem;
   text-align: center;
 }
 #header a {
   width: 0.5rem;
-  line-height: .45rem;
+  line-height: 0.45rem;
   display: block;
   font-size: 0.28rem;
   color: #fff;
   text-align: center;
 }
+#header a:hover {
+  text-decoration: none;
+}
 #header h2 {
   flex: 1;
   color: #fff;
-  line-height: .45rem;
+  line-height: 0.45rem;
   font-weight: normal;
-  font-size: .2rem;
+  font-size: 0.2rem;
   margin: 0 0;
 }
 #header .right {
@@ -97,9 +100,33 @@ button {
   display: block;
   color: #000;
 }
+#main #nav .group .btn-group a:hover {
+  text-decoration: none;
+}
+#main #nav .group .btn-group a i {
+  font-style: normal;
+  border-bottom: 0  !important;
+}
+#main #nav .group .btn-group a .caret {
+  border-top: 8px dashed #8a8a8a;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+#main #nav .group .btn-group a .active {
+  border-top: none;
+  border-bottom: 8px dashed #ff4e49;
+}
+#main #nav .group .btn-group .dropdown-backdrop {
+  top: .8rem;
+}
 #main #nav .group .btn-group .dropdown-menu {
   width: 100vw;
-  top: .3rem;
+  top: 0.3rem;
+}
+#main #nav .group .btn-group .dropdown-menu li .fa {
+  float: right;
+  color: #ff4e49;
+  line-height: .2rem;
 }
 #main #nav .group .btn-group.open .dropdown-toggle {
   -webkit-box-shadow: none;
@@ -113,10 +140,50 @@ button {
   height: 100%;
   border-left: 1px solid #f1f1f1;
   text-align: center;
-  margin-top: .1rem;
+  margin-top: 0.1rem;
 }
 #main #nav .search a {
   color: #000;
   font-size: 16px;
   font-weight: normal;
+}
+#main #product {
+  padding: .05rem;
+}
+#main #product .section li {
+  padding: .05rem;
+  width: 50%;
+  float: left;
+}
+#main #product .section li a {
+  display: block;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+#main #product .section li a img {
+  width: 80%;
+  height: 1.6rem;
+  margin: .1rem auto 0;
+}
+#main #product .section li a .pro-title {
+  color: #000;
+  font-size: .12rem;
+  margin: .1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#main #product .section li a .pro-price span {
+  color: #ff4e49;
+  margin-left: .1rem;
+  font-size: .18rem;
+}
+#main #product .section li a .pro-price .btn-add {
+  float: right;
+  padding: 0 .05rem;
+  color: #fff;
+  margin-right: .05rem;
+  background-color: #ff4e49;
+  border-radius: .05rem;
+  border: none;
 }
